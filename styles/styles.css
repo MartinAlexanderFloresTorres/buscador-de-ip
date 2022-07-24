@@ -1,0 +1,50 @@
+pre {
+  padding: 20px;
+}
+small {
+  display: block;
+  margin-bottom: 20px;
+}
+small span {
+  font-size: 16px;
+  color: #e9e9e9;
+}
+h1 {
+  text-align: center;
+}
+.informacion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+  background: #18232c;
+  padding: 20px;
+}
+.informacion h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+.informacion h3 span {
+  font-weight: normal;
+  font-size: 15px;
+}
+.informacion div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 890px) {
+  .informacion {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .informacion div {
+    display: block;
+  }
+  .informacion img {
+    margin-top: 10px;
+  }
+}
