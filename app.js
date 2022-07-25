@@ -12,8 +12,8 @@ input.addEventListener("paste", validar);
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   const { value } = input;
-  if (value.split("").length > 8) {
-    consultarApi(value);
+  if (value.trimStart().split("").length > 8) {
+    consultarApi(value.trimStart());
   } else {
     input.setAttribute("aria-invalid", "true");
   }
@@ -49,8 +49,9 @@ async function consultarApi (ip){
 
 // validar el input
 function validar() {
+  input.value = input.value.trimStart()
   const { value } = input;
-  value.split("").length > 8
+  value.trimStart().split("").length > 8
     ? input.setAttribute("aria-invalid", "false")
     : input.setAttribute("aria-invalid", "true");
 };
